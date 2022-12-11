@@ -518,7 +518,7 @@ async def gcast(event):
     await kk.edit(text)
 
 
-@ultroid_cmd(pattern="gucast( (.*)|$)", fullsudo=True)
+@ultroid_cmd(pattern="g(admin|)cast ?(.*)",)
 async def gucast(event):
     msg, btn, reply = "", None, None
     if xx := event.pattern_match.group(1).strip():
